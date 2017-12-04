@@ -45,7 +45,7 @@ $browser.get(WEBSITE_URL).then(function () {
         return $browser.findElement(By.css('button[title="Place Order"]')).click();
     });
 }).then(function () {
-    console.log('Order success page.');
+    console.log('Checking Order Success page.');
     return $browser.waitForAndFindElement(By.xpath('//*[@id="maincontent"]/div[3]/div/div[2]/p[1]/span'), 7500).then(function (element) {
         element.getText().then(function (orderNum) {
             console.log('Assert order number: %s.', orderNum);
